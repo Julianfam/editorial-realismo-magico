@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realismo Mágico — Libros</title>
+  <meta name="description" content="Editorial de relatos donde lo imposible se comporta como si siempre hubiera estado ahí. Encerrados hacia arriba y próximas obras." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">R</span>
+        Realismo Mágico
+      </a>
+      <nav class="nav-links">
+        <a href="#libro">Libro actual</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#editorial">Editorial</a>
+        <a href="#avisame">Avisarme</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="libro">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker" id="featured-kicker">Nuevo lanzamiento</p>
+          <h1 id="featured-title">Encerrados hacia arriba</h1>
+          <p class="tagline" id="featured-tagline"></p>
+          <p class="lede" id="featured-desc"></p>
+          <div class="meta-row" id="featured-meta"></div>
+          <div class="actions">
+            <a class="btn btn-gold" id="featured-buy" href="#comprar">Comprar ahora</a>
+            <a class="btn btn-ghost" href="#catalogo">Ver catálogo</a>
+          </div>
+        </div>
+        <div class="cover-stage">
+          <div class="cover-glow"></div>
+          <div class="cover-frame">
+            <img id="featured-cover" alt="Portada del libro destacado" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Catálogo vivo</p>
+            <h2>Libros que vamos ofreciendo</h2>
+          </div>
+          <p>Una vitrina pensada para crecer. Cada título nuevo se suma al mismo estante, sin reconstruir la página.</p>
+        </div>
+        <div class="grid" id="book-grid"></div>
+      </div>
+    </section>
+
+    <section class="section story" id="editorial">
+      <div class="wrap story-grid">
+        <p class="quote">Lo extraordinario no irrumpe. Se sienta a la mesa y pide café.</p>
+        <div>
+          <p class="kicker">La editorial</p>
+          <h2 style="font-size:42px;margin:8px 0 16px;">Historias que tratan lo imposible como cotidiano.</h2>
+          <p>
+            Realismo Mágico es un sello pequeño y progresivo: no publicamos un catálogo de golpe,
+            vamos soltando libros cuando están listos para habitar el mundo.
+          </p>
+          <p>
+            El primero es <em>Encerrados hacia arriba</em>. Después llegan una novela sobre inteligencia
+            artificial y otra ambientada en un mundo futurista. Misma casa. Distintos umbrales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="avisame">
+      <div class="wrap wait-grid">
+        <div>
+          <p class="kicker">Lista de espera</p>
+          <h2 style="font-size:42px;margin:8px 0 14px;">Entérate cuando salga el siguiente libro.</h2>
+          <p style="color:var(--ink-dim);max-width:54ch;">
+            Deja tu correo y te avisamos del lanzamiento de <em>La máquina que sueña</em>
+            y <em>Ciudad que no duerme</em>. Sin spam. Solo cuando hay página nueva que abrir.
+          </p>
+        </div>
+        <form class="panel" id="waitlist-form">
+          <strong>Quiero que me avisen</strong>
+          <div class="form-row">
+            <input type="email" name="email" required placeholder="tu@correo.com" />
+            <button class="btn btn-gold" type="submit">Avisarme</button>
+          </div>
+          <p class="note">Puedes cambiar este formulario luego por ConvertKit, Mailchimp o un Google Form.</p>
+          <p class="ok" id="waitlist-ok">Listo. Te avisaremos en el próximo lanzamiento.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="comprar" style="padding-top:0;">
+      <div class="wrap panel">
+        <p class="kicker">Compra</p>
+        <h2 style="margin:6px 0 10px;">Cómo vender cada libro</h2>
+        <p style="color:var(--ink-dim);max-width:70ch;">
+          El botón de compra de cada título usa el campo <code>buyUrl</code> en <code>js/books.js</code>.
+          Sustitúyelo por el enlace de Amazon, Gumroad, Hotmart, Stripe o WhatsApp cuando lo tengas.
+          Mientras tanto, el botón abre este bloque.
+        </p>
+        <div class="actions" style="margin-top:18px;">
+          <a class="btn btn-gold" href="mailto:hola@realismomagico.com?subject=Quiero Encerrados hacia arriba">Pedir por correo</a>
+          <a class="btn btn-ghost" href="https://wa.me/13055550100?text=Quiero%20comprar%20Encerrados%20hacia%20arriba" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <p class="note">Cambia el correo y el número de WhatsApp por los tuyos reales.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="year"></span> Realismo Mágico</span>
+      <span>Hecho para crecer: un libro más, un objeto más en el catálogo.</span>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-cover"><img id="modal-cover" alt="" /></div>
+      <div class="modal-body">
+        <button class="close" id="modal-close" aria-label="Cerrar">×</button>
+        <p class="kicker" id="modal-genre"></p>
+        <h3 id="modal-title"></h3>
+        <p class="tagline" id="modal-tagline" style="font-size:20px;"></p>
+        <p id="modal-long" style="color:var(--ink-dim);white-space:pre-line;margin:16px 0;"></p>
+        <div class="actions" id="modal-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/books.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 /**
  * CATÁLOGO DE LIBROS
  * ------------------
+ * Primer mercado: Colombia. Precios en COP.
  * Para agregar un libro nuevo, copia un objeto de este array,
  * cambia el "id" (único, sin espacios) y rellena los campos.
  *
@@ -9,7 +10,6 @@
  *   "proximamente" → se muestra aviso + formulario de lista
  *
  * featured: true → aparece como libro principal en el hero
- *                  (solo uno debería ser featured)
  */
 window.BOOKS = [
   {
@@ -21,9 +21,9 @@ window.BOOKS = [
     year: 2026,
     pages: 286,
     genre: "Realismo mágico",
-    price: "12.90",
-    currency: "USD",
-    formats: ["eBook", "Impreso"],
+    price: "49000",
+    currency: "COP",
+    formats: ["eBook", "Impreso", "Envío Colombia"],
     tagline: "Hay cárceles que suben. Y hay gente que prefiere no bajar.",
     description:
       "Un edificio que no aparece en ningún plano. Un ascensor que solo viaja hacia arriba. Cuatro extraños que despiertan encerrados entre pisos que no deberían existir.",
@@ -43,7 +43,7 @@ window.BOOKS = [
     pages: null,
     genre: "Ficción · Inteligencia artificial",
     price: null,
-    currency: "USD",
+    currency: "COP",
     formats: ["eBook", "Impreso"],
     tagline: "¿Qué ocurre cuando una inteligencia aprende a extrañar?",
     description:
@@ -64,7 +64,7 @@ window.BOOKS = [
     pages: null,
     genre: "Ficción · Mundo futurista",
     price: null,
-    currency: "USD",
+    currency: "COP",
     formats: ["eBook", "Impreso"],
     tagline: "En la ciudad que nunca cierra los ojos, olvidar es un privilegio de pago.",
     description:

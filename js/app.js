@@ -8,13 +8,22 @@
 
   function money(book) {
     if (!book.price) return "Próximamente";
-    return `${book.currency === "USD" ? "$" : ""}${book.price} ${book.currency || ""}`.trim();
+    const amount = Number(book.price);
+    if (book.currency === "COP" && !Number.isNaN(amount)) {
+      return new Intl.NumberFormat("es-CO", {
+        style: "currency",
+        currency: "COP",
+        maximumFractionDigits: 0,
+      }).format(amount);
+    }
+    if (book.currency === "USD") return `$${book.price} USD`;
+    return `${book.price} ${book.currency || ""}`.trim();
   }
 
   function renderFeatured() {
     if (!featured) return;
     document.getElementById("featured-kicker").textContent = featured.status === "disponible"
-      ? "Nuevo lanzamiento"
+      ? "Lanzamiento en Colombia"
       : "Próximamente";
     document.getElementById("featured-title").textContent = featured.title;
     document.getElementById("featured-tagline").textContent = featured.tagline || "";
